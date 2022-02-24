@@ -21,10 +21,12 @@ body{
 {
     margin-top: 15px;
     margin-left: 50%;
+    
 }
 #navsign
 {
     margin-left: 50%;
+    width: 30%;
     text-align: center;
 }
 #navsign >div
@@ -33,11 +35,14 @@ body{
     font-size: 16px;
     font-weight: bolder;
     margin-left: 300px;
-    margin-top: -70px;
-    height: 50px;
-    width: 50px;
+    margin-top: -60px;
+    height: 30px;
+    width: 30px;
     border: #00d290 3px solid;
     border-radius: 50%;
+}
+#h5{
+    margin-left: -20px;
 }
 #navsign >div:hover
 {
@@ -392,10 +397,10 @@ p{
 }
 #inst>input
 {
-    height: 90%;
+    height: 20%;
     width: 100%;
     padding-left: 10px;
-    font-size:medium;
+   
 }
 #crt{
     display: flex;
@@ -411,6 +416,9 @@ p{
 }
 #pp{
     color: #00d290;
+}
+h4{
+    font-family: Gilroy,sans-serif;
 }
 #count{  
     margin-left: -200px;
