@@ -397,12 +397,20 @@ p{
     padding-left: 10px;
     font-size:medium;
 }
+#crt{
+    display: flex;
+    margin: auto;
+    width: 80%;
+}
 
 #cart{
     display: flex;
     padding-top: -10px;
     padding-left: 100px;
     border: black solid 1px;
+}
+#pp{
+    color: #00d290;
 }
 #count{  
     margin-left: -200px;
@@ -412,8 +420,11 @@ p{
     font-family: Gilroy,sans-serif;
     color: rgb(66, 63, 63);
     font-weight: bolder;
-    width: 10%;
+    width: 30%;
 }
+/* h2{
+    width: 30%;
+} */
 #pname{  
     margin-left: 10px;
     margin-top: 70px;
@@ -422,8 +433,9 @@ p{
     font-family: Gilroy,sans-serif;
     color: rgb(66, 63, 63);
     font-weight: bolder;
-    width: 50%;
+    width: 30%;
 }
+
 #pprice{
     margin-top: 70px;
     height: 49%;
@@ -431,7 +443,7 @@ p{
     font-family: Gilroy,sans-serif;
     color: rgb(66, 63, 63);
     font-weight: bolder;
-    width: 20%;
+    width: 30%;
 }
 #down{
     height: 100px;
@@ -464,6 +476,7 @@ p{
     margin-left: 200px;
     height: 30px;
     width: 30px;
+     color: #00d290;
 }
 a{
     text-decoration: none;
