@@ -261,7 +261,7 @@ button:hover{
     import cart_data from './component/menu.js';
     document.getElementById('nav_img').addEventListener('click', function(){
 
-window.location.href = '../homepage/homepage.html';
+    window.location.href = '../homepage/homepage.html';
 })
 let obj={}
 
@@ -275,45 +275,45 @@ let obj={}
     co.addEventListener("click",proceed)
 function proceed(){
     window.location.href="../cart/cart.html";
-    
 }
 
-    cart_data.forEach(el=>{
-    // console.log(el)
-    let ful=document.querySelector("#ful")
-    let button=document.createElement("button");
-    let div2=document.createElement("div");
-    let div=document.createElement("div");
-    let img=document.createElement("img");
-    let fh=document.createElement("h4");
-    img.src=el.image;
-    // img.style.width = '25px';
-    // img.style.height = '25px';
-    let rn=Math.floor(Math.random()*100)
-    let h4=document.createElement("h4")
-    h4.textContent=`₹${rn}`
-    fh.textContent=el.name;
-    button.textContent="+ ADD"
-    button.addEventListener("click",cta)
-    function cta(){
-        obj={
-            img:el.image,
-            name:el.name,
-            price:rn
+    let meal = async() => {
 
+    try{
 
-        }
+        let res = await fetch('https://dunzobackendclone.herokuapp.com/restaurants');
+        let meals = await res.json();
+
         
-      
-      
-      
-    
+        cart_data.forEach(el=>{
+        // console.log(el)
+        let ful=document.querySelector("#ful")
+        let button=document.createElement("button");
+        let div2=document.createElement("div");
+        let div=document.createElement("div");
+        let img=document.createElement("img");
+        let fh=document.createElement("h4");
+        img.src=el.image;
+        // img.style.width = '25px';
+        // img.style.height = '25px';
+        let rn=Math.floor(Math.random()*100)
+        let h4=document.createElement("h4")
+        h4.textContent=`₹${rn}`
+        fh.textContent=el.name;
+        button.textContent="+ ADD"
+        button.addEventListener("click",cta)
+        function cta(){
+            obj={
+                img:el.image,
+                name:el.name,
+                price:rn
+            }
         n+=1;
         console.log(el.image)
         sum+=rn;
         localStorage.setItem(`Items${n+100}`,JSON.stringify(obj))
-      localStorage.setItem("NOII",`${n}`)
-localStorage.setItem("SOII",`${sum}`)
+        localStorage.setItem("NOII",`${n}`)
+        localStorage.setItem("SOII",`${sum}`)
         let li=document.createElement("li");
         fvCart.textContent=`${n} Item`
         co.textContent=` Checkout ₹${sum}`  
@@ -333,19 +333,28 @@ localStorage.setItem("SOII",`${sum}`)
             localStorage.setItem("SOII",`${sum}`)
             localStorage.setItem("NOII",`${n}`)
             fvCart.textContent=`${n} Item`
-        co.textContent=` Checkout ₹${sum}`
+            co.textContent=` Checkout ₹${sum}`
         }
         console.log(sum,n)
         li.append(rem)
         ful.append(li)
         console.log(n)
+        }
+        div2.append(fh,h4,button)
+        div.append(img,div2);
+        data_div.append(div)  
+    })
     }
-    div2.append(fh,h4,button)
-   div.append(img,div2);
-   data_div.append(div)  
-})
-
+    catch(e) 
+    {
+        console.log(e);
+    }
+}
 let fvCart=document.querySelector("#item");
+
+meal();
+
+
 
   
 </script>
