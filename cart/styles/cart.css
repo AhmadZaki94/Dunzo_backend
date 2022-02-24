@@ -41,8 +41,9 @@ body{
     border: #00d290 3px solid;
     border-radius: 50%;
 }
-#h5{
-    margin-left: -20px;
+
+#p1{
+    margin-left: 20px;
 }
 #navsign >div:hover
 {
@@ -112,7 +113,9 @@ button:hover{
 h3{
     font-size:x-large;
     font-family: Gilroy,sans-serif;
+    
 }
+
 p{
     font-size:medium;
     font-family: Gilroy,sans-serif;
@@ -246,13 +249,7 @@ p{
     overflow-y: scroll;
     overflow-x: hidden;
 }
-#cart
-{
-    height: 150px;
-    width: 99%;
-    background-color: white;
-    padding-left: 40px;
-}
+
 #check
 {
     background-color: white;
@@ -405,15 +402,27 @@ p{
 #crt{
     display: flex;
     margin: auto;
-    width: 80%;
+    width: 100%;
+    padding-left: 50px;
+     justify-content: space-around;
 }
-
-#cart{
+#h5{
+    
+    width: 50%;
+    height: 30px;
+    font-family: Gilroy,sans-serif;
+}
+#cart
+{
+    height: 150px;
+    width: 65%;
+    padding-left: 40px;
     display: flex;
     padding-top: -10px;
     padding-left: 100px;
     border: black solid 1px;
 }
+
 #pp{
     color: #00d290;
 }
@@ -428,13 +437,13 @@ h4{
     font-family: Gilroy,sans-serif;
     color: rgb(66, 63, 63);
     font-weight: bolder;
-    width: 30%;
+    width: 80%;
 }
 /* h2{
     width: 30%;
 } */
 #pname{  
-    margin-left: 10px;
+    margin-left: 0px;
     margin-top: 70px;
     height: 49%;
     font-size:medium;
@@ -445,6 +454,7 @@ h4{
 }
 
 #pprice{
+    margin-left: 30px;
     margin-top: 70px;
     height: 49%;
     font-size:medium;
