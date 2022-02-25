@@ -44,7 +44,7 @@
 </body>
 </html>
 <script type="module">
-import data from "./scripts/grochome.js"
+//import data from "./scripts/grochome.js"
 // navbar Dynamic
 import navbar from './components/navbar.js'; //changes made by mugil ~changes:homepage.js
 
@@ -59,7 +59,29 @@ import footer from './components/footer.js';
 let footer_container = document.getElementById('footer');
 
 footer_container.innerHTML = footer()
+let mart_div = document.getElementById("data");
+    let response = getData("https://dunzobackendclone.herokuapp.com/markets");
+response
+.then( (res) => {    
+     console.log("res",res)
+        appendData(res, mart_div)
+      })
+      .catch((err) =>{
+    console.log("err",err)
+});
 
+async function getData(url) {
+  try {
+    let res = await fetch(url);
+
+    let data = await res.json();
+    return data;
+  } catch (el) {
+    console.log(el);
+  }
+}
+ function appendData(data, location) {
+ 
 
 data.forEach(el=>{
     let data_div = document.getElementById("data")
@@ -67,14 +89,17 @@ data.forEach(el=>{
     let img = document.createElement("img");    
     let sh = document.createElement("h2");
     let p = document.createElement("p");
+    let p1 = document.createElement("p");
     img.src = el.image;    
-    sh.textContent = el.selection1;
-    p.textContent = el.location    
-    div.append(img,sh,p)    
+    sh.textContent = el.name;
+    p.textContent = el.location  
+    p1.textContent = el.distance 
+    div.append(img,sh,p,p1)    
     data_div.append(div);
     data_div.onclick = function cat(){
     window.location.href = "grocires.html"
     
      }
 })
+ }
 </script>
