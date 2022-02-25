@@ -92,7 +92,7 @@ async function getdetails(event){
         }catch(err){
             console.log(err)
         }
-            let url = `https://dunzobackendclone.herokuapp.com/markets`
+            let url = `https://dunzobackendclone.herokuapp.com/restaurantnames`
 
         let response = await fetch(url,{
             method:"POST",
@@ -107,7 +107,7 @@ async function getdetails(event){
 
     async function getdata(){
         try{
-        let response = await fetch("https://dunzobackendclone.herokuapp.com/markets")
+        let response = await fetch("https://dunzobackendclone.herokuapp.com/restaurantnames")
         let data = await response.json()
         console.log(data)
         }catch(err){
