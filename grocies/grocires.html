@@ -98,7 +98,7 @@
                 <input type="number">
                 <input type="number">
               </div>
-              <a href="homepage.html"><button id="accountpage">Verify and Continue</a></button>
+              <a href="../homepage/homepage.html"><button id="accountpage">Verify and Continue</a></button>
              </form>
         </div>
     <div id="hed">
@@ -207,11 +207,9 @@
     let n=0;
     let sum=0;
   
-  let data_div=document.querySelector("#martdata");
-  
+  let data_div=document.querySelector("#martdata"); 
 
-   
-  import mart from "./scripts/grocires.js"
+ 
   // navbar Dynamic
 import navbar from './components/navbar.js';
 
@@ -226,9 +224,31 @@ import footer from './components/footer.js';
 let footer_container = document.getElementById('footer');
 
 footer_container.innerHTML = footer()
+let mart_div = document.getElementById("martdata");
+    let response = getData("https://dunzobackendclone.herokuapp.com/groceries");
+response
+.then( (res) => {    
+     console.log("res",res)
+        appendData(res, mart_div)
+      })
+      .catch((err) =>{
+    console.log("err",err)
+});
 
-  mart.forEach(el=>{
-    // console.log(el)
+async function getData(url) {
+  try {
+    let res = await fetch(url);
+
+    let data = await res.json();
+    return data;
+  } catch (el) {
+    console.log(el);
+  }
+}
+function appendData(data, location) {
+ 
+  data.forEach(el=>{
+     console.log(el)
     let ful=document.querySelector("#ful")
     let button=document.createElement("button");
     let div2=document.createElement("div");
@@ -239,14 +259,14 @@ footer_container.innerHTML = footer()
     let rn=Math.floor(Math.random()*100)
     let h4=document.createElement("h4")
     h4.textContent=`₹${rn} for 1 kg`
-    fh.textContent=el.selection1;
+    fh.textContent=el.price;
     button.textContent="+ ADD"
     button.addEventListener("click",cta)
     
     function cta(){
       obj={
             img:el.image,
-            name:el.selection1,
+            name:el.price,
             price:rn
 
 
@@ -254,15 +274,14 @@ footer_container.innerHTML = footer()
         n+=1;
         sum+=rn;
         localStorage.setItem(`Items${n+200}`,JSON.stringify(obj))
-      localStorage.setItem("NOIII",`${n}`)
-localStorage.setItem("SOIII",`${sum}`)
+        localStorage.setItem("NOIII",`${n}`)
+        localStorage.setItem("SOIII",`${sum}`)
         let co=document.querySelector("#co");
         let checkout=document.querySelector("#check");
         let li=document.createElement("p");
         fvCart.textContent=`${n} Item`
-        co.textContent=` Checkout ₹${sum}`  
-        // ful.innerHTML = null;    
-        li.textContent=`${el.selection1} || 1 kg || ₹${rn}.00`;        
+        co.textContent=` Checkout ₹${sum}`          
+        li.textContent=`${el.price} || 1 kg || ₹${rn}.00`;        
         let rem=document.createElement("button")
         rem.textContent="Remove"
         rem.addEventListener("click",remo);
@@ -300,7 +319,7 @@ localStorage.setItem("SOIII",`${sum}`)
 let fvCart=document.querySelector("#item");
 
 let fvdata=document.querySelector("#itm");
-
+}
 //Login Popup
 var openLogin = document.getElementById('nav_signin').addEventListener('click', openForm);
 var closeLogin = document.getElementById('cancel').addEventListener('click', closeForm);
