@@ -3,7 +3,7 @@ let rest_data = [
         image: 'https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/dW1jV0QyWWVaNHpkOHZrRmRrZW9Zdz09-1596000055586-store_image.jpg',
         name: 'Murudis Lunch Home',
         type: 'South Indian Chitadripet',
-        distance: '1.8',
+        distance: '1.8 km',
     },
     {
         image: 'https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/62b15813-e43c-4031-af5b-364e6bb7fe4f-1574921823340-store_image.jpg',
