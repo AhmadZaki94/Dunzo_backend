@@ -28,6 +28,44 @@ let navbar_container = document.getElementById('Mnavbar');
 navbar_container.innerHTML = navbar();
 
 
+// document.getElementById('search').addEventListener('click', getData);
+
+// var names = document.getElementById('search_bar').value;
+
+// async function getData(){
+
+//     let res = await fetch(`https://dunzobackendclone.herokuapp.com/fruits`);
+//     let data = await res.json();
+//     console.log(data);
+//     //if(names === 'fruits'){
+        
+//         appendData(data)
+//     //}
+// }
+
+// function appendData(arr){
+
+    
+//     arr.map((e)=>{
+
+
+//           let div = document.createElement('div');
+//           div.setAttribute('id', 'div')
+
+//           let img = document.createElement('img');
+//           img.src = e.image;
+//           img.setAttribute('id', 'img');
+
+//           let name = document.createElement('h4');
+//           name.textContent = e.title;
+//           name.setAttribute('id', 'name');
+
+//           div.append(img, name);
+//           document.getElementById('show').append(div);
+//     })
+// }
+
+
 //search data from search.js
 import {veggies , fruits, mart} from './scripts/search.js'
 
@@ -100,6 +138,8 @@ document.getElementById('search').addEventListener('click', function(){
         })
     }
 })
+
+
 
     
 //homepage navigation

@@ -432,8 +432,9 @@ a{
     color: gray;
   }
   .text_name{
-    padding-left: 20px;
+    text-align: center;
     padding-top: 10px;
+    color: #00d290;;
   }
   #num{
     width: 80%;
@@ -664,5 +665,33 @@ a{
     margin: auto;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding-top: 40px;
+    color: gray;
+}
+#googleSignin{
+    margin-bottom: 10px;
+    height: 40px;
+    width: 150px;
+    background-color: white;
+    color: grey;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: medium;
+    margin-left: 150px;
+    cursor: pointer;
+}
+#googleSignin:hover{
+    color:brown;
+}
+.or{
+    padding-left: 215px;
+}
+.text_name1{
+    padding-top: 30px;
+    text-align: center;
+    color: #00d290;
+}
+.google-signin{
+    text-decoration: none;
     color: gray;
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Restaurants Name</title>
+    <title>Admin markets</title>
     <style>
         #logo{
             width: 100%;
@@ -17,7 +17,7 @@
             margin-top: 20px;
             margin-left: 120px;
         }
-        #restaurantsName{
+        #markets{
             width: 20%;
             margin: auto;
             margin-top: 20px;
@@ -57,7 +57,7 @@
     <div id="logo">
         <img src="logo.png" alt="">
     </div>
-    <form id="restaurantsName">
+    <form id="markets">
         <h4>Restaurant Name</h4>
         <input type="number" placeholder="Enter id" id="id">
         <br>
@@ -75,28 +75,28 @@
 </html>
 <script>
 
-document.getElementById("restaurantsName").addEventListener("submit", getdetails);
+document.getElementById("markets").addEventListener("submit", getdetails);
 
 async function getdetails(event){
         try{
             event.preventDefault();
-            var restaurantsNamedata = {
+            var marketsdata = {
             id:document.getElementById("id").value,
             title:document.getElementById("title").value,
             location:document.getElementById("location").value,
             distance:document.getElementById("distance").value,
             image:document.getElementById("image").value
         }
-        restaurantsNamedata = JSON.stringify(restaurantsNamedata)
-        console.log(restaurantsNamedata)
+        marketsdata = JSON.stringify(marketsdata)
+        console.log(marketsdata)
         }catch(err){
             console.log(err)
         }
-            let url = `https://dunzobackendclone.herokuapp.com/restaurantnames`
+            let url = `https://dunzobackendclone.herokuapp.com/markets`
 
         let response = await fetch(url,{
             method:"POST",
-            body: restaurantsNamedata,
+            body: marketsdata,
             headers:{
                 "Content-Type" : "application/json",
             },
@@ -107,7 +107,7 @@ async function getdetails(event){
 
     async function getdata(){
         try{
-        let response = await fetch("https://dunzobackendclone.herokuapp.com/restaurantnames")
+        let response = await fetch("https://dunzobackendclone.herokuapp.com/markets")
         let data = await response.json()
         console.log(data)
         }catch(err){
@@ -117,3 +117,4 @@ async function getdetails(event){
     getdata();
 
 </script>
+
