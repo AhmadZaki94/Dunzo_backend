@@ -130,47 +130,61 @@
 
     footer_div.innerHTML = footer();
 
-    import rest_data from './component/restaurant.js';
     document.getElementById('nav_img').addEventListener('click', function(){
 
-window.location.href = '../homepage/homepage.html';
+    window.location.href = '../homepage/homepage.html';
 })
-    console.log('rest_data:', rest_data);
 
-    rest_data.forEach(el => {
 
-        let main_div = document.createElement('div');
-        main_div.setAttribute('class','rest_div');
 
-        let img_div = document.createElement('div');
-        img_div.setAttribute('class' , 'rest_img');
+    let restaurant = async () => {
 
-        let name_div = document.createElement('div');
-        name_div.setAttribute('class', 'rest_name');
+        try{
 
-        let img = document.createElement('img');
-        img.src = el.image;
-        img.style.width = '125px';
-        img.style.height = '125px';
+            let res = await fetch('https://dunzobackendclone.herokuapp.com/restaurantnames');
+            let rest_data = await res.json();
+            
+            rest_data.forEach(el => {
 
-        let name = document.createElement('h4');
-        name.innerText = el.name;
+            let main_div = document.createElement('div');
+            main_div.setAttribute('class','rest_div');
 
-        let type = document.createElement('p');
-        type.innerText = el.type;
+            let img_div = document.createElement('div');
+            img_div.setAttribute('class' , 'rest_img');
 
-        let dist = document.createElement('p');
-        dist.innerText = el.distance;
+            let name_div = document.createElement('div');
+            name_div.setAttribute('class', 'rest_name');
 
-        img_div.append(img);
-        name_div.append(name,type,dist);
-        main_div.append(img_div,name_div);
-        document.getElementById('container').append(main_div);
+            let img = document.createElement('img');
+            img.src = el.image;
+            img.style.width = '125px';
+            img.style.height = '125px';
 
-        main_div.onclick = function menu(){
-            window.location.href = 'menu.html';
+            let name = document.createElement('h4');
+            name.innerText = el.name;
+
+            let location = document.createElement('p');
+            location.innerText = el.location;
+
+            let dist = document.createElement('p');
+            dist.innerText = el.distance;
+
+            img_div.append(img);
+            name_div.append(name,location,dist);
+            main_div.append(img_div,name_div);
+            document.getElementById('container').append(main_div);
+
+            main_div.onclick = function menu(){
+                window.location.href = 'menu.html';
+            }
+            });
         }
-    });
+        catch(err){
+            console.log(err);
+        }
+    }
+    
+restaurant();
 
 </script>
 
