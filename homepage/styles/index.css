@@ -432,9 +432,9 @@ a{
     color: gray;
   }
   .text_name{
-    text-align: center;
-    padding-top: 10px;
-    color: #00d290;;
+      line-height: 5px;
+      padding-left: 20px;
+    color: gray;
   }
   #num{
     width: 80%;
@@ -669,22 +669,24 @@ a{
 }
 #googleSignin{
     margin-bottom: 10px;
-    height: 40px;
-    width: 150px;
-    background-color: white;
-    color: grey;
-    border: 1px solid black;
+    height: 50px;
+    width: 300px;
+    background-color: dodgerblue;
+    border: 1px solid dodgerblue;
     border-radius: 10px;
     font-weight: 800;
     font-size: medium;
-    margin-left: 150px;
+    margin-left: 80px;
     cursor: pointer;
+    padding-left: 20px;
 }
 #googleSignin:hover{
     color:brown;
 }
 .or{
-    padding-left: 215px;
+    padding-left: 210px;
+    padding-top: 40px;
+    color: gray;
 }
 .text_name1{
     padding-top: 30px;
@@ -693,5 +695,14 @@ a{
 }
 .google-signin{
     text-decoration: none;
-    color: gray;
+    color: white;
+}
+.google-img{
+    width: 250px;
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-bottom: -50px;
+}
+.signin-para{
+    color: white;
 }
