@@ -12,16 +12,16 @@ We used Mongodb,Express.js and Node.js and Heroku for backend.
 ![Screenshot 2022-01-23 145835](https://user-images.githubusercontent.com/95955345/150672585-82f54a75-df08-4d41-9c13-252113f1dcbb.jpg)
 
 # > Groceies page
-![Screenshot 2022-01-23 145922](https://user-images.githubusercontent.com/95955345/150672603-61ace8a7-3c46-4c5f-9419-95491fa26b65.jpg)
+![Screenshot 2022-02-26 185729](https://user-images.githubusercontent.com/95955345/155845081-d54f02ba-c1b6-4d1d-b67c-1c0591a50cb6.jpg)
 
 # > Send packages page
 ![Screenshot 2022-01-23 150145](https://user-images.githubusercontent.com/95955345/150672621-e770da96-059e-4823-9d08-876e551a75fc.jpg)
 
 # > Restaurants page
-![Screenshot 2022-01-23 150210](https://user-images.githubusercontent.com/95955345/150672635-fd4aad3c-4ac4-4db3-8bd0-939bdd9760f2.jpg)
+![Screenshot 2022-02-26 185830](https://user-images.githubusercontent.com/95955345/155845091-9599845f-30b1-40b0-8589-44ace746f1ba.jpg)
 
 # > Fruits and vegetables page
-![Screenshot 2022-01-23 150237](https://user-images.githubusercontent.com/95955345/150672654-bee4200b-db43-4053-bb5a-2d1efaea460d.jpg)
+![Screenshot 2022-02-26 185908](https://user-images.githubusercontent.com/95955345/155845102-5b28c841-0f6e-43bc-9ff1-24b5d88f7869.jpg)
 
 # > Cart page
 ![Screenshot 2022-01-23 150311](https://user-images.githubusercontent.com/95955345/150672681-5e5b1a4a-27b8-487a-936a-ea775b2790e1.jpg)
