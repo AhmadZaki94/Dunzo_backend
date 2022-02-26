@@ -251,14 +251,12 @@ button:hover{
 
 <script type="module">
    
-    // let fvCart=document.querySelector("#fvCart")
     import navbar from '../homepage/components/navbar.js';
 
     let nav_div = document.getElementById('Mnavbar');
 
     nav_div.innerHTML = navbar();
 
-    import cart_data from './component/menu.js';
     document.getElementById('nav_img').addEventListener('click', function(){
 
     window.location.href = '../homepage/homepage.html';
@@ -285,7 +283,7 @@ function proceed(){
         let meals = await res.json();
 
         
-        cart_data.forEach(el=>{
+        meals.forEach(el=>{
         // console.log(el)
         let ful=document.querySelector("#ful")
         let button=document.createElement("button");
@@ -299,13 +297,13 @@ function proceed(){
         let rn=Math.floor(Math.random()*100)
         let h4=document.createElement("h4")
         h4.textContent=`₹${rn}`
-        fh.textContent=el.name;
+        fh.textContent=el.title;
         button.textContent="+ ADD"
         button.addEventListener("click",cta)
         function cta(){
             obj={
                 img:el.image,
-                name:el.name,
+                name:el.title,
                 price:rn
             }
         n+=1;
@@ -318,7 +316,7 @@ function proceed(){
         fvCart.textContent=`${n} Item`
         co.textContent=` Checkout ₹${sum}`  
         
-        li.textContent=`${el.name} || 1 kg || ₹${rn}.00`;        
+        li.textContent=`${el.title} || 1 kg || ₹${rn}.00`;        
         let rem=document.createElement("button")
         rem.textContent="Remove"
         rem.addEventListener("click",remo);
