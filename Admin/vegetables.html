@@ -24,6 +24,20 @@
             box-shadow: 2px 2px 2px 5px gray;
             border-radius: 20px;
         }
+        #vegetables_patch{
+            width: 20%;
+            margin: auto;
+            margin-top: 20px;
+            box-shadow: 2px 2px 2px 5px gray;
+            border-radius: 20px;
+        }
+        #vegetables_del{
+            width: 20%;
+            margin: auto;
+            margin-top: 20px;
+            box-shadow: 2px 2px 2px 5px gray;
+            border-radius: 20px;
+        }
         input{
             margin-top: 20px;
             width: 90%;
@@ -68,11 +82,32 @@
         <br>
         <input type="submit" placeholder="submit form">
     </form>
+
+    <!-- <form id="vegetables_patch">
+        <h4>Update</h4>
+        <input type="number" placeholder="Enter id" id="id">
+        <br>
+        <input type="text" placeholder="Enter title" id="title">
+        <br>
+        <input type="number" placeholder="Enter price" id="price">
+        <br>
+        <input type="text" placeholder="Enter image url" id="image">
+        <br>
+        <input type="submit" placeholder="submit form">
+    </form> -->
+
+    <!-- <div id="vegetables_del">
+        <h4>Delete</h4>
+        <input type="number" placeholder="Enter id" id="del_id">
+        <br>
+        <button id="del_submit" onclick="deletedetails()">Submit</button>
+    </div> -->
 </body>
 </html>
 <script>
 
 document.getElementById("vegetables").addEventListener("submit", getdetails);
+//document.getElementById("vegetables_patch").addEventListener("submit", patchdetails);
 
 async function getdetails(event){
         try{
@@ -111,5 +146,31 @@ async function getdetails(event){
         }
     }
     getdata()
+
+
+//  deletedetails = async ()=>{
+
+
+//     try{
+
+//         let id = document.getElementById('del_id').value;
+        
+//         let response = await fetch(`https://dunzobackendclone.herokuapp.com/vegetables/${id}`, {
+//             method: "DELETE",
+
+//             headers: {
+                
+//                 "Content-Type": "application/json"
+//             },
+//         })
+        
+//         let data = await response.json();
+//         console.log(data);
+
+//     }catch(err){
+//         console.log(err)
+//     }
+// }
+
 
 </script>
